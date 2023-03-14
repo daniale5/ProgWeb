@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> Alert e Promp em JS </title>
+	<style type="text/css">
+		#bloco {
+
+			height: 150px;
+			width:70px;
+			border: 1px solid orangered;
+			margin: 3px;
+		}
+	</style>
+</head>
+<body onkeypress="addStyle()">
+	<button type="button" onclick="obterDado()"> Get </button> <br>
+	<br>
+	<button type="button" onclick="mensagem()"> Click here </button>
+
+	<div onmousemove="mudarFundo()" id="content" style="width: 200px; height: 160px; background-color: chocolate;">  </div>
+
+	<div id="bloco"> Conteúdo </div>
+	<script>
+		function obterDado() {
+			dado = window.prompt("Digite um dado: ");
+			// alert(dado);
+			console.log(dado); //Exibe no inspector
+		}
+		function mensagem() {
+			alert("Hello World, aqui é 2º Inf!");
+		}
+
+		function mudarFundo() {
+			document.getElementById("content").style.background = 'green';
+		}
+
+		function addStyle() {
+			let element = document.getElementById("bloco");
+			element.style.cssText = 
+									'width:80px;' +
+									'height:50px;' +
+									'background:blue;' +
+									'b0rder-radius:15px;';
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> Validar formulário com JS </title>
+	<style type="text/css">
+	  div{
+	  		height: 25px;
+			width:170px;
+			border: 1px solid black;
+			margin: 3px;
+	  }
+	</style>
+
+</head>
+<body onkeypress="teclaEnter()">
+	<form>
+		<p> Nome: <input type="text" id="nome"> </p>
+		<p> Senha:<input type="password" id="senha"> </p>
+		<p> <button type="button" onclick="getValues()"> Validar </button> </p><hr>
+		<p> Nome: <input type="text" id="getName" readonly>     </p>
+		<p> Senha:<input type="text" id="getPass" readonly> </p>
+	</form>
+	<hr>
+      <section>
+        nome<div id="val01"></div>
+        senha<div id="val02"></div>
+
+
+      </section>
+<hr>
+	<section>
+		<div id="text01"> EEEP Amélia </div>
+		<div id="text02"> A melhor </div>
+
+		<button type="button" onclick="getTexto()" > Obter texto </button>
+	</section>
+	<script> 
+		function getValues(){
+			let nome = document.getElementById("nome").value;
+			let senha = document.getElementById("senha").value;
+
+			document.getElementById("getName").value = nome;
+			document.getElementById("getPass").value = senha;
+
+			//console.log(nome+' - '+senha);
+			//alert("Nome:"+nome+'-Senha:'+senha);
+		}
+
+		function teclaEnter() {
+			if (window.event.keyCode == 13) {
+			let nome = document.getElementById("nome").value;
+			let senha = document.getElementById("senha").value;
+
+			document.getElementById("val01").innerHTML = nome;
+			document.getElementById("val02").innerHTML = senha;
+			}
+		}
+
+		function getTexto(){
+			alert(document.getElementById("text01").innerText);
+			alert(document.getElementById("text02").innerText);
+		}
+	</script>
+</body>
+</html>

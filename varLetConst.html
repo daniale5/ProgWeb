@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Tipos Var, Let e Const </title>
+</head>
+<body>
+    <script>
+        var disciplina = "Fundamentos de Programação"; //global
+
+        function modificaDisciplina(){
+            disciplina = "Lógica de Programação";
+        }
+        modificaDisciplina(); //chama a função
+        if(true){
+            disciplina = "Programação Web!";
+        }
+        var i = 0;
+        while(i < 5 ){
+            disciplina = "Sistemas Operacionais";
+            i++;
+        }
+        { //bloco
+            disciplina = "Gestão de Tempo!";
+        }
+        console.log(disciplina);
+        console.log("Escopo da função do tipo VAR");
+
+        function media(n1,n2){
+            var med = (n1+n2)/2
+            console.log(med);
+        }
+        media(7,8);
+        // console.log(med); - acesso negado
+        var escola = "Lucas Emmanuel";
+        console.log(escola);
+        var escola = "Amélia Figueiredo"; //Redeclaração da variável - desvantagem
+        console.log(escola);
+
+        console.log("---- Escorpo do tipo LET ----")
+
+        let professor = "João Victor";
+        function modProf(){
+            professor = "Rivânio";
+        }
+        modProf();
+        of(true){
+            professor = "Francisco Dias";
+        }
+        console.log(professor);
+        
+</script>
+</body>
+</html>
